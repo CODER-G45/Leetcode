@@ -1,19 +1,18 @@
 class Solution {
 public:
     long long sumAndMultiply(int n) {
-        string a = to_string(n);
-        string b ="";
-        int sum = 0;
-        for(char c : a)
+        string s = to_string(n);
+        long long sum = 0;
+        long long x = 0;
+        for(char c : s)
         {
+            int dig = c - '0';
             if(c != '0')
             {
-                b = b+c;
-                sum += c - '0';
+                x = x*10 + dig;
+                sum += dig;
             }
         }
-        if(b.empty()) return 0;
-        long long ans = 1LL * stoi(b) * sum;
-        return ans;
+        return x*sum;
     }
 };
