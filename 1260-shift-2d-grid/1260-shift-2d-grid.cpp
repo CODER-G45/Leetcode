@@ -2,6 +2,8 @@ class Solution {
 public:
     vector<vector<int>> shiftGrid(vector<vector<int>>& grid, int k) {
         int m = grid.size(), n = grid[0].size();
+         k = k % (m*n);
+        if(k == 0) return grid;
         if(m == 1 && n == 1) return grid;
         vector<vector<int>>ans(m , vector<int>(n,0));
         // for(int i = 0; i < n; i++)
@@ -12,7 +14,6 @@ public:
         //     }
         // }
         int i = 0 , j = 0;
-        // k = k % (m*n);
         for(int x = 1; x <= k ; x++ )
         {
             
