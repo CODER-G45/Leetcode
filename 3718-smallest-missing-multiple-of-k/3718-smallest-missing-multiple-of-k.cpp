@@ -3,7 +3,6 @@ public:
     int missingMultiple(vector<int>& nums, int k) {
         set<int>s;
         int ans = k;
-        sort(nums.begin(),nums.end());
         for(int x : nums)
         {
             if(x % k == 0){
