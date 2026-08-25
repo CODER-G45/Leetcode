@@ -9,8 +9,8 @@ public:
                 s.insert(x);
                 if(x == ans){
                     int i = x / k;
-                    while(s.count(i*k))i++;
-                    ans = i*k;
+                    while(s.count(i++*k));
+                    ans = --i*k;
                 }
             }
         }
